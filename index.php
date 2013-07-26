@@ -59,7 +59,6 @@
             });
 
             jQuery('.remove').click(function() {
-                jQuery('#inputElement:last').prev().prev().remove();
                 jQuery('#inputElement:last').prev().remove();
                 jQuery('#inputElement:last').remove();
                 --i;
