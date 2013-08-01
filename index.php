@@ -48,23 +48,25 @@
             }
         </style>
         <script>
-            var i = 0;
-            jQuery('.remove').hide();
-            conteudo = jQuery("#divInputElement").html();
-            jQuery(".add").click(function() {
-                jQuery("#divInputElement").append(conteudo);
-                i++;
-                jQuery('.remove').show();
-                return false;
-            });
+            jQuery(function() {
+                var i = 0;
+                jQuery('.remove').hide();
+                conteudo = jQuery("#divInputElement").html();
+                jQuery(".add").click(function() {
+                    jQuery("#divInputElement").append(conteudo);
+                    i++;
+                    jQuery('.remove').show();
+                    return false;
+                });
 
-            jQuery('.remove').click(function() {
-                jQuery('#inputElement:last').prev().remove();
-                jQuery('#inputElement:last').remove();
-                --i;
-                if (i == 0) {
-                    jQuery('.remove').hide();
-                }
+                jQuery('.remove').click(function() {
+                    jQuery('#inputElement:last').prev().remove();
+                    jQuery('#inputElement:last').remove();
+                    --i;
+                    if (i == 0) {
+                        jQuery('.remove').hide();
+                    }
+                });
             });
         </script>
     </body>
